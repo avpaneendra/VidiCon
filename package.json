@@ -11,11 +11,9 @@
   "author": "Salman Hossain Saif",
   "license": "MIT",
   "dependencies": {
-    "bootstrap": "^4.4.1",
     "gulp": "^3.9.1",
     "gulp-clean-css": "^4.2.0",
     "gulp-html-minifier2": "^1.1.11",
-    "gulp-javascript-obfuscator": "^1.1.6",
-    "jquery": "^3.2.1"
+    "gulp-javascript-obfuscator": "^1.1.6"
   }
 }
