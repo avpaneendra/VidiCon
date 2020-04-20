@@ -134,3 +134,19 @@ color: var(--primary-blue);
 #vidicon_window {
     background:url('https://i.ya-webdesign.com/images/svg-charts-loading-gif-3.gif') center center no-repeat;
   }
+  div#leave_btn {
+    width: 100%;
+    text-align: center;
+    height: auto;
+    position: absolute;
+    bottom: 23px;
+}
+.leave_meeting {
+    height: 50px;
+    width: 60px;
+    border-radius: 35px;
+    text-align: center;
+}
+div#leave_btn a {
+    line-height: 34px;
+}

@@ -14,12 +14,22 @@ $(function () {
         };
 
         var api = new JitsiMeetExternalAPI(domain, options);
-        api.executeCommand('password', localStorage.currentPassword);
         //setting video window hegiht to full window height
         $("iframe").css("height", "92vh");
         $(".username").text(localStorage.thisUserName);
         $(".email").text(localStorage.thisUserEmail);
         $(".current_room").text(options['roomName']);
+
+
+
+        var setPass = document.getElementById("setPass");
+document.getElementById("myButton").addEventListener("click", function() {
+    console.log( setPass.value );
+    api.executeCommand('password', document.getElementById("setPass").value );
+
+});
+
+
     }
 
 
