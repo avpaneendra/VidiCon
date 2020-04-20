@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700&display=swap');
+
+:root {
+    --main-font: 'Cairo', sans-serif;
+    --white : #ffffff;
+    --primary-blue:#007AFF;
+    --secondary-offwhite: #FFF7F2;
+    --txt-black: #333333;
+    --danger: #eb5757
+}
+html {
+    scroll-behavior: smooth;
+}
+body{
+    font-family: var(--main-font) !important;
+    overflow-x: hidden;
+}
+.primary_bg {background-color: var(--primary-blue);}
+.main-nav {
+
+    background: var(--white);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+
+}
+/* components */
+.p_primary_btn {
+
+    padding: 10px 20px;
+    background: var(--primary-blue);
+    border-radius: 5px;
+    color:var(--white);
+    font-weight: 600;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 20px;
+
+}
+.p_secondary_btn {
+
+    padding: 10px 20px;
+    color:var(--primary-blue);
+    font-weight: 600;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 20px;
+background: var(--secondary-offwhite);
+
+border: 1px solid var(--primary-blue);
+box-sizing: border-box;
+border-radius: 5px;
+
+}
+/* components */
+.pod_count{
+    
+font-style: normal;
+font-weight: 700;
+font-size: 5.7em;
+color: var(--primary-blue);
+
+}
+
+.pod_hero_subtitle{
+
+font-style: normal;
+font-weight: bold;
+font-size: 72px;
+line-height: 86px;
+color: var(--txt-black);
+}
+.hero-text-area p {
+font-size: 26px;
+text-transform: capitalize;
+color:var(--main-font);
+}
+.hero-info-section{
+    background: var(--secondary-offwhite);
+border-radius: 9px;
+padding: 20px;
+box-shadow: 0px 5px 11px rgba(0, 0, 0, 0.11);
+}
+.title_box h4 {
+font-style: normal;
+font-weight: bold;
+font-size: 30px;
+line-height: 38px;
+color: var(--primary-blue);
+}
+
+/* pricing plan */
+.custom-separator {
+    width: 100%;
+    height: 2px;
+    opacity: 0.4;
+  }
+.pricing-pill{
+    width: 10px;
+    height: 10px;
+    color: var(--white);
+}
+  /* pricing plan  */
+  .bd-callout {
+    padding: 1.25rem;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+    border: 1px solid #eee;
+        border-left-width: 5px;
+    border-left-width: .25rem;
+    border-radius: .25rem;
+    border-left-color: var(--danger);
+}
+.room_name {
+    width: auto;
+    background: white;
+    padding: 20px;
+    position: absolute;
+    top: 105px;
+    text-align: center;
+    border-radius: 100px;
+    left: 16px;
+    z-index: 9999;
+    min-width: 205px;
+}
+.new_meeting {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+#vidicon_window {
+    background:url('https://i.ya-webdesign.com/images/svg-charts-loading-gif-3.gif') center center no-repeat;
+  }

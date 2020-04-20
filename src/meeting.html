@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VidiCon | Free video conferencing </title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src='https://meet.jit.si/external_api.js'></script>
+    <script src="./meeting.js"></script>
+</head>
+<body>
+   <div class="main-nav">  <!-- sticky-top -->
+        <div class="container">
+    
+          <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="#">
+              <img src="./img/full_logo.svg" width="230px" height="43px" class="d-inline-block align-top" alt=""> </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto mr-4">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <!-- <li class="nav-item">
+                  <a class="nav-link" href="#pricing">Pricing</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="">Contact Us</a>
+                </li> -->
+              </ul>
+              <div class="">
+                <a class="btn btn-danger mr-4" href="./index.html" onclick="localStorage.clear()">Leave Meeting</a>
+                <!-- <a href="" class="btn p_secondary_btn">Follow me on Twitter</a> -->
+              </div>
+              <img src="./img/def_avatar.png" alt="" height="50px">
+              <div class="">
+              <p class="m-0 ml-1"> <b class="username">loading</b></p>
+              </div>
+              
+            </div>
+          </nav>
+    
+        </div>
+      </div>
+      <div class="room_name">
+          <span class="current_room font-weight-bold">Room Name</span>
+          </div>
+      <div class="container-fluid p-0">
+            <div id="vidicon_window"></div>
+    </div>
+
+    
+    
+</body>
+</html>

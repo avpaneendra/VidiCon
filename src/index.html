@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VidiCon | Free video conferencing </title>
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+  <div class="main-nav">
+    <!-- sticky-top -->
+    <div class="container">
+
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">
+          <img src="./img/full_logo.svg" width="230px" height="43px" class="d-inline-block align-top" alt=""> </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto mr-4">
+            <li class="nav-item active">
+              <a class="nav-link" href="./index.html">Home </a>
+            </li>
+            <!-- <li class="nav-item">
+                  <a class="nav-link" href="#pricing">Pricing</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="">Contact Us</a>
+                </li> -->
+          </ul>
+          <div class="">
+            <a class="btn p_primary_btn mr-4" href="https://twitter.com/rajkumar_saif">Follow me on Twitter</a>
+            <!-- <a href="" class="btn p_secondary_btn">Follow me on Twitter</a> -->
+          </div>
+
+        </div>
+      </nav>
+
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 mt-4 mx-auto">
+        <div class="p-3 my-2">
+          <h4> <b>Create / Join </b> a meeting</h4>
+        </div>
+
+        <form onsubmit="return setMeetingInfo()">
+          <div class="new_meeting mb-2">
+            <div class="form-group">
+              <label for="new_room_name">Enter Room Name</label>
+              <input required type="text" class="form-control new_room_name" id="new_room_name"
+                aria-describedby="RoomNameHelp" placeholder="Room Name" >
+              <small id="RoomNameHelp" class="form-text text-muted">Enter Room Name (no space allowed)</small>
+            </div>
+          </div>
+
+          <div class="new_meeting mb-2">
+            <div class="form-row">
+              <div class="col">
+                <div class="form-group">
+                  <label for="new_room_display_name">Your Display Name</label>
+                  <input required type="text" class="form-control" id="new_room_display_name"
+                    placeholder="Enter Your Display Name">
+                </div>
+              </div>
+
+
+            </div>
+
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block" >Create / Join Meeting</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+    
+    function setMeetingInfo() {
+      
+      new_room_name = $("#new_room_name").val();
+      new_room_password = $("#new_room_password").val();
+      new_room_display_name = $("#new_room_display_name").val();
+      new_room_display_email = $("#new_room_display_email").val();
+
+
+      localStorage.setItem("currentRoomName", new_room_name);
+      localStorage.setItem("thisUserName", new_room_display_name);
+      location.reload();
+
+    }
+    $(function () {
+
+     
+    if (localStorage.currentRoomName || localStorage.thisUserName) {
+      window.location.assign("./meeting.html")
+    }
+    })
+    $("input#new_room_name").on({
+  keydown: function(e) {
+    if (e.which === 32)
+      return false;
+  },
+  change: function() {
+    this.value = this.value.replace(/\s/g, "");
+  }
+});
+
+  console.log(localStorage.thisUserName);
+    
+  </script>
+
+</body>
+
+</html>
