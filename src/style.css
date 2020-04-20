@@ -140,6 +140,7 @@ color: var(--primary-blue);
     height: auto;
     position: absolute;
     bottom: 23px;
+    display: none;
 }
 .leave_meeting {
     height: 50px;
