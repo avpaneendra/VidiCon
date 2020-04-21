@@ -6,9 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VidiCon | Free video conferencing </title>
   <link rel="icon" href="./img/favicon.png" sizes="64x64" type="image/png">
-  <meta property="og:image" content="https://repository-images.githubusercontent.com/257235848/279d4880-8321-11ea-9023-6b943ccc76e2">
+  <meta property="og:image"
+    content="https://repository-images.githubusercontent.com/257235848/279d4880-8321-11ea-9023-6b943ccc76e2">
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="./style.css">
 
 </head>
@@ -39,7 +41,8 @@
                 </li> -->
           </ul>
           <div class="">
-            <a class="btn p_primary_btn mr-4" href="https://twitter.com/rajkumar_saif" target="_blank">Follow me on Twitter</a>
+            <a class="btn p_primary_btn mr-4" href="https://twitter.com/rajkumar_saif" target="_blank">Follow me on
+              Twitter</a>
             <!-- <a href="" class="btn p_secondary_btn">Follow me on Twitter</a> -->
           </div>
 
@@ -80,17 +83,70 @@
 
           </div>
 
-          <button type="submit" class="btn btn-primary btn-block" >Create / Join Meeting</button>
+          <button type="submit" class="btn btn-primary btn-block mb-2">Create / Join Meeting</button>
         </form>
+        <div class="wrap-collabsible">
+          <input id="collapsible" class="toggle" type="checkbox">
+          <label for="collapsible" class="lbl-toggle" style="cursor: pointer;">How to use ?</label>
+          <div class="collapsible-content">
+            <div class="content-inner">
+             
+                <h3 class="code-line" data-line-start=0 data-line-end=1><a id="Creating_a_meeting_0"></a>Creating a meeting
+                  </h1>
+                  <hr>
+                  <ol>
+                    <li class="has-line-data" data-line-start="4" data-line-end="5">Go to <a
+                        href="https://vidicon.netlify.app/">https://vidicon.netlify.app/</a></li>
+                    <li class="has-line-data" data-line-start="5" data-line-end="6">Enter a room name</li>
+                    <li class="has-line-data" data-line-start="6" data-line-end="7">Enter your display name</li>
+                    <li class="has-line-data" data-line-start="7" data-line-end="8">Click Create / Join Button</li>
+                  </ol>
+                  <h3 class="code-line" data-line-start=11 data-line-end=12><a id="Invite_other_to_join_11"></a>Invite other
+                    to join</h1>
+                    <hr>
+                    <ol>
+                      <li class="has-line-data" data-line-start="13" data-line-end="14">Tell them to visit <a
+                          href="https://vidicon.netlify.app/">https://vidicon.netlify.app/</a></li>
+                      <li class="has-line-data" data-line-start="14" data-line-end="15">Enter the room name you created
+                        earlier</li>
+                      <li class="has-line-data" data-line-start="15" data-line-end="16">Enter their display name</li>
+                      <li class="has-line-data" data-line-start="16" data-line-end="17">Click Create / Join Button</li>
+                    </ol>
+                    <blockquote>
+                      <p class="has-line-data" data-line-start="20" data-line-end="22"> <i>Room name have to be the same as
+                          you created. Otherwhise it will
+                          create a new meeting room with new name.</i> </p>
+                    </blockquote>
+                    <h3 class="code-line" data-line-start=25 data-line-end=26><a id="Join_meeting_25"></a>Join meeting</h1>
+                      <hr>
+                      <ol>
+                        <li class="has-line-data" data-line-start="28" data-line-end="29">Go to <a
+                            href="https://vidicon.netlify.app/">https://vidicon.netlify.app/</a></li>
+                        <li class="has-line-data" data-line-start="29" data-line-end="30">Enter the room name you want to join
+                        </li>
+                        <li class="has-line-data" data-line-start="30" data-line-end="31">Enter your display name</li>
+                        <li class="has-line-data" data-line-start="31" data-line-end="33">Click Create / Join Button</li>
+                      </ol>
+                      <blockquote>
+                        <p class="has-line-data" data-line-start="33" data-line-end="35"> <i>Room name have to be the same as
+                            the room you want to join. Otherwhise it will
+                            create a new meeting room with new name.</i> </p>
+                      </blockquote>
+            
+            </div>
+          </div>
+        </div>
+
+        
       </div>
 
     </div>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script>
-    
+
     function setMeetingInfo() {
-      
+
       new_room_name = $("#new_room_name").val();
       new_room_password = $("#new_room_password").val();
       new_room_display_name = $("#new_room_display_name").val();
@@ -104,23 +160,23 @@
     }
     $(function () {
 
-     
-    if (localStorage.currentRoomName || localStorage.thisUserName) {
-      window.location.assign("./meeting.html")
-    }
+
+      if (localStorage.currentRoomName || localStorage.thisUserName) {
+        window.location.assign("./meeting.html")
+      }
     })
     $("input#new_room_name").on({
-  keydown: function(e) {
-    if (e.which === 32)
-      return false;
-  },
-  change: function() {
-    this.value = this.value.replace(/\s/g, "");
-  }
-});
+      keydown: function (e) {
+        if (e.which === 32)
+          return false;
+      },
+      change: function () {
+        this.value = this.value.replace(/\s/g, "");
+      }
+    });
 
-  console.log(localStorage.thisUserName);
-    
+    console.log(localStorage.thisUserName);
+
   </script>
 
 </body>
