@@ -38,6 +38,6 @@ document.getElementById("myButton").addEventListener("click", function() {
     
     }
 
-
+    mixpanel.track("Meeting Initiated", {"page": "meeting.html"});
 
 })
