@@ -165,8 +165,8 @@
       localStorage.setItem("thisUserName", new_room_display_name);
       location.reload();
 
-      mixpanel.track("SetMeetingInfo", {"page": "index.html"});
-      mixpanel.track(new_room_name, {"room":new_room_name});
+      mixpanel.track("SetMeetingInfo", {"page": "index.html","room":new_room_name});
+     
 
 
     }
