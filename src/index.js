@@ -6,22 +6,21 @@ import 'bootstrap';
 function setMeetingInfo() {
     var new_room_name = $("#new_room_name").val().toLowerCase();
     var new_room_display_name = $("#new_room_display_name").val();
-    //var new_room_password = $("#new_room_password").val();
-    //var new_room_display_email = $("#new_room_display_email").val();
 
     localStorage.setItem("currentRoomName", new_room_name);
     localStorage.setItem("thisUserName", new_room_display_name);
+
     location.reload();
     mixpanel.track("SetMeetingInfo", { "page": "index.html", "room": new_room_name, "userDisplayName": new_room_display_name });
 }
 
 $(function () {
+    //checks if meeting info set and redirect
     if (localStorage.currentRoomName || localStorage.thisUserName) { window.location.assign("./meeting.html"); console.log("Meeting Info Set"); }
     else { console.log("Meeting Info Not Set"); }
- document.getElementById("meeting-submit").addEventListener("click", setMeetingInfo);
 
-
-    //eleminatin spaces from room name on keyup event
+   
+    //eleminating spaces from room name on keyup event
     $("input#new_room_name").on({
         keydown: function (e) {
             if (e.which === 32)
@@ -33,8 +32,12 @@ $(function () {
         }
     });
 
-    console.log(localStorage.thisUserName);
 
+ //setting meeting info
+    document.getElementById("meeting-submit").addEventListener("click", setMeetingInfo);
+    console.log("Your display name is: "+ localStorage.thisUserName);
+    
+//loading mix panel
     (function (c, a) {
         if (!a.__SV) {
             var b = window; try { var d, m, j, k = b.location, f = k.hash; d = function (a, b) { return (m = a.match(RegExp(b + "=([^&]*)"))) ? m[1] : null }; f && d(f, "state") && (j = JSON.parse(decodeURIComponent(d(f, "state"))), "mpeditor" === j.action && (b.sessionStorage.setItem("_mpcehash", f), history.replaceState(j.desiredHash || "", c.title, k.pathname + k.search))) } catch (n) { } var l, h; window.mixpanel = a; a._i = []; a.init = function (b, d, g) {
