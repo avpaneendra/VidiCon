@@ -1,19 +1,19 @@
 {
   "name": "vidicon",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "",
-    "build": ""
+    "dev": "parcel ./src/*.html",
+    "build": "parcel build ./src/*.html"
   },
   "author": "Salman Hossain Saif",
   "license": "MIT",
   "dependencies": {
-    "gulp": "^3.9.1",
-    "gulp-clean-css": "^4.2.0",
-    "gulp-html-minifier2": "^1.1.11",
-    "gulp-javascript-obfuscator": "^1.1.6"
+    "bootstrap": "^4.5.0",
+    "jquery": "^3.5.1",
+    "parcel-bundler": "^1.12.4",
+    "popper.js": "^1.16.1"
   }
 }
