@@ -17,7 +17,6 @@
 </head>
 
 <body>
-  <div class="side-bar">asdad</div>
   <div class="main-nav">
     <!-- sticky-top -->
     <div class="container">
@@ -61,15 +60,30 @@
 
     </div>
   </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-2 side-bar text-light">
+        <!-- <div class="sidebar-sticky"></div> -->
+          <p>
+            sidebar content
+          </p>
+        
+      </div>
+      <div class="col-10 ml-sm-auto col-lg-10 p-0">
+        
+          <div id="vidicon_window"></div>
+          <div id="leave_btn"> <a class="btn btn-danger leave_meeting" href="./index.html" onclick="localStorage.clear()"><img
+                src="./img/call_end-24px.svg" alt=""></a></div>
+      
+      </div>
+    </div>
+  </div>
+  <!-- <div class="side-bar">asdad</div> -->
+  
   <div class="room_name">
     <span class="current_room font-weight-bold">Room Name</span>
   </div>
-  <div class="container-fluid p-0">
-    <div id="vidicon_window"></div>
-    <div id="leave_btn"> <a class="btn btn-danger leave_meeting" href="./index.html" onclick="localStorage.clear()"><img
-          src="./img/call_end-24px.svg" alt=""></a></div>
-
-  </div>
+  
   <script src="./meeting.js"></script>
 
 </body>

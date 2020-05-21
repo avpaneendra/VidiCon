@@ -14,6 +14,7 @@ html {
 body{
     font-family: var(--main-font) !important;
     overflow-x: hidden;
+    background: #474747;
 }
 .primary_bg {background-color: var(--primary-blue);}
 .main-nav {
@@ -113,15 +114,15 @@ color: var(--primary-blue);
     border-left-color: var(--danger);
 }
 .room_name {
-    width: auto;
-    background: white;
-    padding: 20px;
-    position: absolute;
-    top: 105px;
-    text-align: center;
-    border-radius: 100px;
-    left: 125px;
-    min-width: 205px;
+  width: auto;
+  background: white;
+  padding: 22px;
+  position: absolute;
+  top: 103px;
+  text-align: center;
+  border-radius: 100px;
+  left: 325px;
+  min-width: 205px;
 }
 .new_meeting {
     background: #ffffff;
@@ -199,9 +200,20 @@ div#leave_btn a {
   }
 /* collapsible */
 .side-bar {
-  width: 160px;
-  background: red;
-  height: 100vh;
+  min-width: 170px !important;
+  background: #383838;
+  height: 92vh;
   float: left;  
   z-index: 9999;
+  word-wrap: break-word;
 }
+/* side bar  */
+.sidebar-sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  position: relative;
+  top: 0;
+  height: calc(100vh - 48px);
+  padding-top: .5rem;
+}
+/* side bar  */
