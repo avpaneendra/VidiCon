@@ -120,8 +120,7 @@ color: var(--primary-blue);
     top: 105px;
     text-align: center;
     border-radius: 100px;
-    left: 16px;
-    z-index: 9999;
+    left: 125px;
     min-width: 205px;
 }
 .new_meeting {
@@ -199,3 +198,10 @@ div#leave_btn a {
     border-bottom-left-radius: 0;
   }
 /* collapsible */
+.side-bar {
+  width: 160px;
+  background: red;
+  height: 100vh;
+  float: left;  
+  z-index: 9999;
+}
