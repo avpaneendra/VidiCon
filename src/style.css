@@ -211,7 +211,7 @@ div#leave_btn a {
   float: left;  
   z-index: 9999;
   word-wrap: break-word;
-  overflow: hidden;
+  overflow-x: scroll;
 }
 /* side bar  */
 .sidebar-sticky {
@@ -228,3 +228,8 @@ div#leave_btn a {
     float: left;
 }
 /* side bar  */
+.btm-btn {
+  position: absolute;
+  bottom: 0;
+  border-radius: 0;
+}
