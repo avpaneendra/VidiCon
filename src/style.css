@@ -211,6 +211,7 @@ div#leave_btn a {
   float: left;  
   z-index: 9999;
   word-wrap: break-word;
+  overflow: hidden;
 }
 /* side bar  */
 .sidebar-sticky {
@@ -222,7 +223,8 @@ div#leave_btn a {
   padding-top: .5rem;
 }
 .btn_sidebar {
-  width: 100%;
-  border-radius: 0;
+  width: 50%;
+    border-radius: 0;
+    float: left;
 }
 /* side bar  */
