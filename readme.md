@@ -1,10 +1,10 @@
 # Local Development
 
 
-
     $ git clone <repo_url>
     $ cd vidicon
     $ npm install
+    $ npm run dev
 
 # Production
 
@@ -14,7 +14,8 @@ You can just use the "src" folder. Or additionally if you need optimized product
 
   
 
-    $ gulp build
+    $ npm run build //top level / subdomain deploy
+    $ parcel build ./src/*.html --public-url <url> // for subfolder based deployment
 
   
 
@@ -26,7 +27,7 @@ and check the "dist" folder
 
   
 
-1. Go to https://vidicon.netlify.app/
+1. Go to https://saif71.com/vidicon/
 2. Enter a room name
 3. Enter your display name
 4. Click Create / Join Button
@@ -35,7 +36,7 @@ and check the "dist" folder
 
 # Invite other to join
 
-1. Tell them to visit https://vidicon.netlify.app/
+1. Tell them to visit https://saif71.com/vidicon/
 2. Enter the room name you created earlier
 3. Enter their display name
 4. Click Create / Join Button
@@ -50,7 +51,7 @@ and check the "dist" folder
 # Join meeting
 
 
-1. Go to https://vidicon.netlify.app/
+1. Go to https://saif71.com/vidicon/
 2. Enter the room name you want to join
 3. Enter your display name
 4. Click Create / Join Button

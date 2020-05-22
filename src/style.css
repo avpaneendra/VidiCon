@@ -113,16 +113,21 @@ color: var(--primary-blue);
     border-left-color: var(--danger);
 }
 .room_name {
-    width: auto;
-    background: white;
-    padding: 20px;
-    position: absolute;
-    top: 105px;
-    text-align: center;
-    border-radius: 100px;
-    left: 16px;
-    z-index: 9999;
-    min-width: 205px;
+  width: auto;
+  background: #474747;
+  padding: 22px;
+  position: absolute;
+  top: 103px;
+  text-align: center;
+  border-radius: 100px;
+  left: 325px;
+  min-width: 205px;
+  color: white;
+}
+@media only screen and (max-width: 1370px){
+  .room_name {
+    left: 237px;
+  }
 }
 .new_meeting {
     background: #ffffff;
@@ -135,11 +140,12 @@ color: var(--primary-blue);
     background:url('https://i.ya-webdesign.com/images/svg-charts-loading-gif-3.gif') center center no-repeat;
   }
   div#leave_btn {
-    width: 100%;
+    width: 50px;
     text-align: center;
     height: auto;
     position: absolute;
     bottom: 23px;
+    left: 760px;
     display: none;
 }
 .leave_meeting {
@@ -199,3 +205,32 @@ div#leave_btn a {
     border-bottom-left-radius: 0;
   }
 /* collapsible */
+.side-bar {
+  width: 220px !important;
+  background: #383838;
+  height: 92vh;
+  float: left;  
+  z-index: 9999;
+  word-wrap: break-word;
+  overflow-y: auto;
+}
+/* side bar  */
+.sidebar-sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  position: relative;
+  top: 0;
+  height: calc(100vh - 48px);
+  padding-top: .5rem;
+}
+.btn_sidebar {
+  width: 50%;
+    border-radius: 0;
+    float: left;
+}
+/* side bar  */
+.btm-btn {
+  position: absolute;
+  bottom: 30px;
+  border-radius: 0;
+}
