@@ -140,11 +140,12 @@ color: var(--primary-blue);
     background:url('https://i.ya-webdesign.com/images/svg-charts-loading-gif-3.gif') center center no-repeat;
   }
   div#leave_btn {
-    width: 100%;
+    width: 50px;
     text-align: center;
     height: auto;
     position: absolute;
     bottom: 23px;
+    left: 760px;
     display: none;
 }
 .leave_meeting {
