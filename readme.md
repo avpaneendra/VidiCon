@@ -58,3 +58,8 @@ and check the "dist" folder
 
 > Room name have to be the same as the room you want to join. Otherwhise it will
 > create a new meeting room with new name.
+
+# Screenshots
+![](https://i.imgur.com/2wjxSU9.png)
+------
+![](https://i.imgur.com/x8gMok3.png)
