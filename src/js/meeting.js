@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import 'bootstrap';
+import * as animate from 'animate.css';
 
 window.dataLayer = window.dataLayer || [];
 function gtag() { dataLayer.push(arguments); }

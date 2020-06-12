@@ -13,7 +13,6 @@
   <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="./style.css">
   <script src="./js/meeting.js"></script>
-  <script src='https://meet.jit.si/external_api.js'></script>
 
 </head>
 <body>
@@ -24,10 +23,25 @@
                 <img src="./img/walkthrough.png" class="img-fluid" alt="">
             </div>
             <div class="col-12 p-0">
- <a href="./meeting.html" class="btn btn-primary btn-lg btn-block btm-btn">Back to meeting</a>
+ <a href="./meeting.html" class="btn btn-primary btn-lg btn-block btm-btn" id="back_to_meeting_button">Back to meeting</a>
             </div>
            
         </div>
     </div>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <script>
+      ga('send', {
+            hitType: 'event',
+            eventCategory: 'VidiCon - In No Mobile Warning',
+            eventAction: 'No Mobile Warning Viewed'
+        });
+        document.getElementById("back_to_meeting_button").addEventListener("click", function () {
+          ga('send', {
+            hitType: 'event',
+            eventCategory: 'VidiCon - In No Mobile Warning',
+            eventAction: 'Back to Meeting Button Tapped'
+        });
+        })
+    </script>
 </body>
 </html>
