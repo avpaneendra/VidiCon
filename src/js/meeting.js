@@ -9,9 +9,7 @@ $(function () {
         var options = {
             roomName: localStorage.currentRoomName,
             parentNode: document.querySelector('#vidicon_window'),
-            userInfo: {
-                displayName: localStorage.thisUserName
-            }
+            userInfo: {displayName: localStorage.thisUserName}
 
         };
 
@@ -65,3 +63,4 @@ console.log("mobilecheck == " + window.mobilecheck);
     mixpanel.track("Meeting Initiated", { "page": "meeting.html", "room": options['roomName'], "userDisplayName": localStorage.thisUserName });
 
 })
+console.log('VidiCon app version = '+ process.env.npm_package_version);
